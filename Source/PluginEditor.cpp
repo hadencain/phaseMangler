@@ -9,7 +9,7 @@ PhaseManglerEditor::PhaseManglerEditor(PhaseManglerProcessor& p)
       band3Col(p.apvts, 3)
 {
     setLookAndFeel(&laf);
-    setSize(600, 360);
+    setSize(600, 440);
 
     addAndMakeVisible(presetPanel);
     addAndMakeVisible(freqDisplay);
@@ -18,13 +18,13 @@ PhaseManglerEditor::PhaseManglerEditor(PhaseManglerProcessor& p)
     addAndMakeVisible(band3Col);
 
     wetMixKnob.setSliderStyle(juce::Slider::RotaryVerticalDrag);
-    wetMixKnob.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 60, 16);
+    wetMixKnob.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 52, 20);
     addAndMakeVisible(wetMixKnob);
 
     wetMixLabel.setText("Wet", juce::dontSendNotification);
     wetMixLabel.setJustificationType(juce::Justification::centred);
-    wetMixLabel.setFont(juce::Font(10.0f));
-    wetMixLabel.setColour(juce::Label::textColourId, PhaseManglerLookAndFeel::textMuted);
+    wetMixLabel.setFont(juce::Font(11.0f));
+    wetMixLabel.setColour(juce::Label::textColourId, PhaseManglerLookAndFeel::textPrimary);
     addAndMakeVisible(wetMixLabel);
 
     buildStamp.setText(juce::String(__DATE__) + " " + CMAKE_BUILD_TYPE,

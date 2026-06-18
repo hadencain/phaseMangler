@@ -10,11 +10,11 @@ static juce::Colour bandColorForIndex(int idx)
 static void setupKnob(juce::Slider& s, juce::Label& l, const juce::String& name)
 {
     s.setSliderStyle(juce::Slider::RotaryVerticalDrag);
-    s.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 60, 16);
+    s.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 72, 20);
     l.setText(name, juce::dontSendNotification);
     l.setJustificationType(juce::Justification::centred);
-    l.setFont(juce::Font(10.0f));
-    l.setColour(juce::Label::textColourId, PhaseManglerLookAndFeel::textMuted);
+    l.setFont(juce::Font(11.0f));
+    l.setColour(juce::Label::textColourId, PhaseManglerLookAndFeel::textPrimary);
 }
 
 BandColumn::BandColumn(juce::AudioProcessorValueTreeState& a, int idx)
